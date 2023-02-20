@@ -1,0 +1,13 @@
+@import 'variables';
+
+body {
+    margin: 0;
+    font-family: $font-family;
+    font-size: $font-size;
+    font-weight: $font-weight;
+  }
+  
+  code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+      monospace;
+  }
