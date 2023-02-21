@@ -4,8 +4,75 @@ body {
   font-family: "League Spartan", sans-serif;
   font-size: 32px;
   font-weight: 700;
+  background-color: hsl(222deg, 26%, 31%);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+.header-container {
+  display: flex;
+}
+.header-container .header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 16px;
+  box-sizing: border-box;
+}
+.header-container .header .header-title {
+  margin: 0;
+}
+.header-container .header .header-theme {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.header-container .header .header-theme .header-theme-title {
+  margin: 0;
+  margin-right: 16px;
+}
+.header-container .header .header-theme .header-theme-options {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 120px;
+  height: 40px;
+  background-color: #eee;
+  border-radius: 20px;
+  padding: 2px;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+.header-container .header .header-theme .header-theme-options .header-theme-option, .header-container .header .header-theme .header-theme-options .header-theme-selector {
+  font-size: 18px;
+  transition: color 0.3s ease-in-out;
+  color: #000;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.header-container .header .header-theme .header-theme-options .header-theme-option.selected, .header-container .header .header-theme .header-theme-options .selected.header-theme-selector {
+  color: #fff;
+}
+.header-container .header .header-theme .header-theme-options .header-theme-option[data-theme="1"]:hover ~ .header-theme-selector, .header-container .header .header-theme .header-theme-options [data-theme="1"].header-theme-selector:hover ~ .header-theme-selector {
+  transform: translateY(0%);
+}
+.header-container .header .header-theme .header-theme-options .header-theme-selector {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  background-color: orange;
+  transition: transform 0.3s ease-in-out;
 }/*# sourceMappingURL=index.css.map */

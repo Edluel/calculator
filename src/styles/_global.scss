@@ -1,13 +1,13 @@
 @import 'variables';
+@import 'mixins';
 
 body {
-    margin: 0;
-    font-family: $font-family;
-    font-size: $font-size;
-    font-weight: $font-weight;
-  }
-  
-  code {
-    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-      monospace;
-  }
+  margin: 0;
+  font-family: $font-family;
+  font-size: $font-size;
+  font-weight: $font-weight;
+  background-color: $theme-1-bg-main;
+  @include xy-flex-center(column);
+  width: 100%;
+  height: 100vh;
+}
