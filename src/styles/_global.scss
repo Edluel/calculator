@@ -1,10 +1,13 @@
 @import 'variables';
 @import 'mixins';
 
+:root{
+  font-size: $font-size;
+}
+
 body {
   margin: 0;
   font-family: $font-family;
-  font-size: $font-size;
   font-weight: $font-weight;
   background-color: $theme-1-bg-main;
   @include xy-flex-center(column);

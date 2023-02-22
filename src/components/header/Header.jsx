@@ -1,6 +1,7 @@
 import React from 'react';
 import { useState } from 'react';
 
+
 export default function Header() {
   const [theme, setTheme] = useState(1);
 
@@ -11,7 +12,14 @@ export default function Header() {
   };
 
   const applyTheme = (selectedTheme) => {
-    // Lógica para aplicar o tema selecionado
+    // change body background color
+    if (selectedTheme === 1) {
+      require('../../../src/styles/themes/theme1/theme1.css');
+    } else if (selectedTheme === 2) {
+      require('../../../src/styles/themes/theme2/theme2.css');
+    } else {
+      require('../../../src/styles/themes/theme3/theme3.css');
+    }  
   };
 
   return (
@@ -42,7 +50,6 @@ export default function Header() {
             >
               3
             </div>
-            <div className="header-theme-selector"></div>
           </div>{/*header theme optionsr*/}
         </div>{/*header theme control*/}
       </header> {/*header container*/}
