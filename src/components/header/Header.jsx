@@ -2,6 +2,8 @@ import React from 'react';
 import { useState } from 'react';
 import applyTheme from './applyTheme';
 
+applyTheme(1);
+
 export default function Header() {
   const [theme, setTheme] = useState(1);
 

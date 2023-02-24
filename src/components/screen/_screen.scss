@@ -1,0 +1,13 @@
+.calculator-screen {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 91%;
+    height: 100px;
+    padding: 0 15px;
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: right;
+    user-select: none;
+    background-color: #eee;
+  }

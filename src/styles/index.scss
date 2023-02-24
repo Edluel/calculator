@@ -1,5 +1,7 @@
 @use 'global';
 @use '../components/header/header';
+@use '../components/screen/screen';
+@use '../components/keyboard/keyboard';
 
 .App{
     width: 360px;

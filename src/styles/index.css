@@ -7,7 +7,6 @@ body {
   margin: 0;
   font-family: "League Spartan", sans-serif;
   font-weight: 700;
-  background-color: hsl(222deg, 26%, 31%);
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -67,6 +66,48 @@ body {
 }
 .header-container .header-theme-options .header-theme-option.selected {
   background-color: aqua;
+}
+
+.calculator-screen {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 91%;
+  height: 100px;
+  padding: 0 15px;
+  border-radius: 10px;
+  overflow: hidden;
+  text-align: right;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  background-color: #eee;
+}
+
+.calculator-buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 15px;
+  padding: 15px;
+  background-color: antiquewhite;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+.calculator-buttons button {
+  width: 100%;
+  height: 50px;
+  font-size: 24px;
+  border-radius: 10px;
+  border: none;
+  background-color: #e0e0e0;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.calculator-buttons button:hover {
+  background-color: #d0d0d0;
+}
+.calculator-buttons button.two-columns {
+  grid-column: span 2;
 }
 
 .App {
