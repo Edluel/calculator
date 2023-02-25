@@ -1,9 +1,59 @@
+import { render } from '@testing-library/react';
 import React from 'react'
+import { useState } from 'react';
 
 export default function Keyboard() {
+    const [value, setValue] = useState(0);
+    const [oldValue, setOldValue] = useState(0);
+    const [operator, setOperator] = useState(null);
 
     const handleButtonClick = (value) => {
-        console.log(value);
+      
+      if (typeof value === "number") {
+        setValue(value);
+      } else if (typeof value === "string") {
+          const screen = document.querySelector('.calculator-screen');
+          if (value === 'del') {
+            if(screen.textContent.length === 1) {
+              screen.textContent = '0';
+            } else {
+              screen.textContent = screen.textContent.slice(0, -1);
+            }
+            return;
+          } else if (value === 'reset') {
+            screen.textContent = '0';
+            setOldValue(0);
+            setOperator(null);
+            return;
+          } else if (value === '=') {
+              if (operator === '+') {
+                screen.textContent = parseFloat(oldValue) + parseFloat(screen.textContent);
+              } else if (operator === '-') {
+                screen.textContent = parseFloat(oldValue) - parseFloat(screen.textContent);
+              } else if (operator === 'x') {
+                screen.textContent = parseFloat(oldValue) * parseFloat(screen.textContent);
+              } else if (operator === '/') {
+                screen.textContent = parseFloat(oldValue) / parseFloat(screen.textContent);
+              }
+              return;
+          } else {
+            setOperator(value);
+            setOldValue(screen.textContent);
+            screen.textContent = '0';
+          }
+      }
+
+
+      updateScreen(value);
+    }
+
+    function updateScreen(value) {
+        const screen = document.querySelector('.calculator-screen');
+        if (screen.textContent === '0') {
+            document.querySelector('.calculator-screen').textContent = value;
+        } else {
+            document.querySelector('.calculator-screen').textContent += value;
+        }
     }
 
   return (

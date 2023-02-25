@@ -2,15 +2,14 @@ import React from 'react';
 import { useState } from 'react';
 import applyTheme from './applyTheme';
 
-applyTheme(1);
-
 export default function Header() {
   const [theme, setTheme] = useState(1);
+
+  applyTheme(theme);
 
   const handleThemeChange = (event) => {
     const selectedTheme = parseInt(event.target.dataset.theme, 10);
     setTheme(selectedTheme);
-    applyTheme(selectedTheme);
   };
 
   return (
