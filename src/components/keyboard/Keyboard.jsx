@@ -9,7 +9,7 @@ export default function Keyboard() {
 
     const handleButtonClick = (value) => {
       
-      if (typeof value === "number") {
+      if (typeof value === "number" || value === '.') {
         setValue(value);
       } else if (typeof value === "string") {
           const screen = document.querySelector('.calculator-screen');
@@ -40,6 +40,7 @@ export default function Keyboard() {
             setOperator(value);
             setOldValue(screen.textContent);
             screen.textContent = '0';
+            return;
           }
       }
 

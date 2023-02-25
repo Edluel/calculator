@@ -1,11 +1,11 @@
 import React from 'react';
 import { useState } from 'react';
-import applyTheme from './applyTheme';
+//import applyTheme from './applyTheme';
 
 export default function Header() {
   const [theme, setTheme] = useState(1);
 
-  applyTheme(theme);
+  //applyTheme(theme);
 
   const handleThemeChange = (event) => {
     const selectedTheme = parseInt(event.target.dataset.theme, 10);
