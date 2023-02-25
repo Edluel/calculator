@@ -5,12 +5,37 @@ $font-family: 'League Spartan', sans-serif;
 $font-weight: 700;
 
 // Theme 1
-$theme-1-bg-main: hsl(222, 26%, 31%);
+    //header
+$theme-1-text-header: hsl(0, 0%, 100%);
+$theme-1-selected-option: hsl(6, 63%, 50%);
 $theme-1-bg-toggle: hsl(223, 31%, 20%);
+$theme-1-selected-option-hover: hsl(6, 63%, 70%);
+    //screen
+$theme-1-text-screen: hsl(0, 0%, 100%);
 $theme-1-bg-screen: hsl(224, 36%, 15%);
+    //keys
+$theme-1-keyboard-bg: hsl(223, 31%, 20%);
+$theme-1-key-bg: hsl(30, 25%, 89%);
+$theme-1-key-shadow: hsl(221, 14%, 31%);
+$theme-1-key-text: hsl(221, 14%, 31%);
+$theme-1-key-hover: hsl(0, 0%, 100%);
 
-$theme-1-key-bg: hsl(225, 21%, 49%);
-$theme-1-key-shadow: hsl(224, 28%, 35%);
+$theme-1-undo-bg: hsl(221, 14%, 31%);
+$theme-1-undo-text: hsl(0, 0%, 100%);
+$theme-1-undo-shadow: hsl(223, 31%, 20%);
+$theme-1-undo-hover: hsl(223, 31%, 70%);
+
+$theme-1-equal-bg: hsl(6, 63%, 50%);
+$theme-1-equal-text: hsl(0, 0%, 100%);
+$theme-1-equal-shadow: hsl(6, 70%, 34%);
+$theme-1-equal-hover: hsl(6, 63%, 70%);
+
+
+
+
+
+
+
 
 $theme-1-key-red: hsl(6, 63%, 50%);
 $theme-1-key-red-shadow: hsl(6, 70%, 34%);
@@ -22,9 +47,41 @@ $theme-1-text-very-dark-grayish-blue: hsl(221, 14%, 31%);
 $theme-1-text-white: hsl(0, 0%, 100%);
 
 // Theme 2
-$theme-2-bg-main: hsl(0, 0%, 90%);
+    //header
+$theme-2-text-header: black;
+$theme-2-selected-option: hsl(25, 98%, 40%);
 $theme-2-bg-toggle: hsl(0, 5%, 81%);
+$theme-2-selected-option-hover: hsl(25, 98%, 70%);
+    //screen
+$theme-2-text-screen: black;
 $theme-2-bg-screen: hsl(0, 0%, 93%);
+    //keys
+$theme-2-keyboard-bg: hsl(35, 11%, 61%);
+$theme-2-key-bg: hsl(30, 25%, 89%);
+$theme-2-key-shadow: hsl(35, 11%, 71%);
+$theme-2-key-text: hsl(221, 14%, 31%);
+$theme-2-key-hover:hsl(0, 0%, 100%);
+    
+$theme-2-undo-bg: hsl(185, 42%, 37%);
+$theme-2-undo-text: hsl(0, 0%, 100%);
+$theme-2-undo-shadow: hsl(185, 58%, 25%);
+$theme-2-undo-hover:hsl(185, 42%, 70%);
+    
+$theme-2-equal-bg: hsl(25, 98%, 40%);
+$theme-2-equal-text: hsl(0, 0%, 100%);
+$theme-2-equal-shadow: hsl(25, 99%, 27%);
+$theme-2-equal-hover:hsl(25, 98%, 70%);
+    
+
+
+
+
+
+
+
+
+
+
 
 $theme-2-key-dark-moderate-cyan: hsl(185, 42%, 37%);
 $theme-2-key-very-dark-cyan: hsl(185, 58%, 25%);
@@ -39,9 +96,40 @@ $theme-2-text-very-dark-grayish-yellow: hsl(60, 10%, 19%);
 $theme-2-text-white: hsl(0, 0%, 100%);
 
 // Theme 3
-$theme-3-bg-main: hsl(268, 75%, 9%);
+    //header
+$theme-3-text-header: hsl(52, 100%, 62%);
+$theme-3-selected-option: hsl(176, 100%, 44%);
 $theme-3-bg-toggle: hsl(268, 71%, 12%);
+$theme-3-selected-option-hover: hsl(176, 100%, 70%);
+    //screen
+$theme-3-text-screen: hsl(52, 100%, 62%);
 $theme-3-bg-screen: hsl(268, 71%, 12%);
+    //keys
+$theme-3-keyboard-bg: hsl(268, 71%, 12%);
+$theme-3-key-bg: hsl(281, 89%, 15%);
+$theme-3-key-shadow: hsl(285, 91%, 52%);
+$theme-3-key-text: hsl(52, 100%, 62%);
+$theme-3-key-hover: hsl(281, 89%, 50%);
+        
+$theme-3-undo-bg: hsl(281, 89%, 26%);
+$theme-3-undo-text: hsl(0, 0%, 100%);
+$theme-3-undo-shadow: hsl(285, 91%, 52%);
+$theme-3-undo-hover: hsl(281, 89%, 70%);
+        
+$theme-3-equal-bg: hsl(176, 100%, 44%);
+$theme-3-equal-text: hsl(198, 20%, 13%);
+$theme-3-equal-shadow: hsl(177, 92%, 70%);
+$theme-3-equal-hover: hsl(176, 100%, 70%);
+            
+
+
+
+
+
+
+
+
+
 
 $theme-3-key-dark-violet: hsl(281, 89%, 26%);
 $theme-3-key-vivid-magenta: hsl(285, 91%, 52%);

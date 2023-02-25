@@ -1,6 +1,188 @@
+@import './_variables';
+
 @mixin xy-flex-center($fdirection,$space:space-around) {
     display: flex;
     flex-direction: $fdirection;
     justify-content: $space;
     align-items: center;
+}
+
+@mixin header-theme($theme) {
+    @if $theme ==1{
+        .header{
+            &-title {
+                color: $theme-1-text-header;
+            }
+            &-theme{
+                &-title {
+                    color: $theme-1-text-header;
+                }
+                &-option {
+                    background-color: $theme-1-bg-toggle;
+                    color: $theme-1-text-header;
+                    &.selected {
+                        background-color: $theme-1-selected-option;
+                        &:hover{
+                            background-color: $theme-1-selected-option-hover;
+                        }
+                    }
+                }
+                &-options {
+                    background-color: $theme-1-bg-toggle;
+                }
+
+            }
+        }
+    }
+    @else if $theme == 2 {
+        .header{
+            &-title {
+                color: $theme-2-text-header;
+            }
+            &-theme{
+                &-title {
+                    color: $theme-2-text-header;
+                }
+                &-option {
+                    background-color: $theme-2-bg-toggle;
+                    color: $theme-2-text-header;
+                    &.selected {
+                        background-color: $theme-2-selected-option;
+                        &:hover{
+                            background-color: $theme-2-selected-option-hover;
+                        }
+                    }
+                }
+                &-options {
+                    background-color: $theme-2-bg-toggle;
+                }
+
+            }
+        }
+    }
+    @else if $theme == 3 {
+        .header{
+            &-title {
+                color: $theme-3-text-header;
+            }
+            &-theme{
+                &-title {
+                    color: $theme-3-text-header;
+                }
+                &-option {
+                    background-color: $theme-3-bg-toggle;
+                    color: $theme-3-text-header;
+                    &.selected {
+                        background-color: $theme-3-selected-option;
+                        &:hover{
+                            background-color: $theme-3-selected-option-hover;
+                        }
+                    }
+                }
+                &-options {
+                    background-color: $theme-3-bg-toggle;
+                }
+
+            }
+        }
+    }
+}
+
+@mixin screen-theme($theme){
+    @if $theme == 1{
+        background-color: $theme-1-bg-screen;
+        color: $theme-1-text-screen;
+    }
+    @else if $theme == 2{
+        background-color: $theme-2-bg-screen;
+        color: $theme-2-text-screen;
+    }
+    @else if $theme == 3{
+        background-color: $theme-3-bg-screen;
+        color: $theme-3-text-screen;
+    }
+}
+
+@mixin key-theme($theme){
+    @if $theme == 1{
+        background-color: $theme-1-keyboard-bg;
+        button {
+            background-color: $theme-1-key-bg;
+            box-shadow: inset 0px -3px 1px 0px $theme-1-key-shadow;
+            color:$theme-1-key-text;
+            &:hover{
+                background-color: $theme-1-key-hover;
+            }
+        }
+        .undo-bt{
+            background-color: $theme-1-undo-bg;
+            color: $theme-1-undo-text;
+            box-shadow: inset 0px -3px 1px 0px $theme-1-undo-shadow;
+            &:hover{
+                background-color: $theme-1-undo-hover;
+            }
+        }
+        .equal{
+            background-color: $theme-1-equal-bg;
+            color: $theme-1-equal-text;
+            box-shadow: inset 0px -3px 1px 0px $theme-1-equal-shadow;
+            &:hover{
+                background-color: $theme-1-equal-hover;
+            }
+        }
+    }
+    @else if $theme == 2{
+        background-color: $theme-2-keyboard-bg;
+        button {
+            background-color: $theme-2-key-bg;
+            box-shadow: inset 0px -3px 1px 0px $theme-2-key-shadow;
+            color:$theme-2-key-text;
+            &:hover{
+                background-color: $theme-2-key-hover;
+            }
+        }
+        .undo-bt{
+            background-color: $theme-2-undo-bg;
+            color: $theme-2-undo-text;
+            box-shadow: inset 0px -3px 1px 0px $theme-2-undo-shadow;
+            &:hover{
+                background-color: $theme-2-undo-hover;
+            }
+        }
+        .equal{
+            background-color: $theme-2-equal-bg;
+            color: $theme-2-equal-text;
+            box-shadow: inset 0px -3px 1px 0px $theme-2-equal-shadow;
+            &:hover{
+                background-color: $theme-2-equal-hover;
+            }
+        }
+    }
+    @else if $theme == 3{
+        background-color: $theme-3-keyboard-bg;
+        button {
+            background-color: $theme-3-key-bg;
+            box-shadow: inset 0px -3px 1px 0px $theme-3-key-shadow;
+            color:$theme-3-key-text;
+            &:hover{
+                background-color: $theme-3-key-hover;
+            }
+        }
+        .undo-bt{
+            background-color: $theme-3-undo-bg;
+            color: $theme-3-undo-text;
+            box-shadow: inset 0px -3px 1px 0px $theme-3-undo-shadow;
+            &:hover{
+                background-color: $theme-3-undo-hover;
+            }
+        }
+        .equal{
+            background-color: $theme-3-equal-bg;
+            color: $theme-3-equal-text;
+            box-shadow: inset 0px -3px 1px 0px $theme-3-equal-shadow;
+            &:hover{
+                background-color: $theme-3-equal-hover;
+            }
+        }
+    }
 }

@@ -1,8 +1,10 @@
+@import '../../styles/mixins';
+
 .header-container {
     display: flex;
     flex-direction: row;
   
-    .header {
+    .header{
         display: flex;
         justify-content: space-between;
         width: 100%;
@@ -14,12 +16,12 @@
         &-theme {
             display: flex;
             flex-direction: row;
-            width: 50%;
+            width: 45%;
             justify-content: space-between;
  
             &-title {
                 margin-right: 16px;
-                font-size: 0.7rem;
+                font-size: 0.5rem;
                 padding-top: 16px;
             }
   
@@ -29,12 +31,12 @@
                 align-items: center;
                 width: 90px;
                 height: 35px;
-                background-color: #eee;
                 border-radius: 20px;
                 padding: 2px;
                 box-sizing: border-box;
                 cursor: pointer;
                 transition: background-color 0.3s ease-in-out;
+                margin-top: 15px;
     
                 .header-theme-option {
                     font-size: 18px;
@@ -47,18 +49,24 @@
                     align-items: center;
                     border-radius: 50%;
                     cursor: pointer;
-                    background-color: #eee;
+
                     transition: background-color 0.5s ease-in-out;    
-                    
-                    &.selected {
-                        background-color: aqua;
-                    }
                     
                 }
     
                 
             }
         }
+    }
+
+    &.theme-1 {
+        @include header-theme(1);
+    }
+    &.theme-2 {
+        @include header-theme(2);
+    }
+    &.theme-3 {
+        @include header-theme(3);
     }
 }
   

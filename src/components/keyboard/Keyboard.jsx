@@ -2,10 +2,11 @@ import { render } from '@testing-library/react';
 import React from 'react'
 import { useState } from 'react';
 
-export default function Keyboard() {
+export default function Keyboard(props) {
     const [value, setValue] = useState(0);
     const [oldValue, setOldValue] = useState(0);
     const [operator, setOperator] = useState(null);
+    const theme = props.theme;
 
     const handleButtonClick = (value) => {
       
@@ -58,7 +59,7 @@ export default function Keyboard() {
     }
 
   return (
-    <div className="calculator-buttons">
+    <div className={`calculator-buttons ${theme === 1 ? 'theme-1' : theme === 2 ? 'theme-2' : 'theme-3'}`}>
       <button onClick={() => handleButtonClick(7)}>7</button>
       <button onClick={() => handleButtonClick(8)}>8</button>
       <button onClick={() => handleButtonClick(9)}>9</button>
